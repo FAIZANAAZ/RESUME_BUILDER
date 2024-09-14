@@ -49,13 +49,13 @@ if (profile.files && profile.files[0]) {
     reader.onload=function () {
         const baseimag = reader.result as string;
         localStorage.setItem("from_profilepic",baseimag)
-        window.location.href="./dynamic.html"
+        window.location.href="../dynamic/dynamic.html"
 
     }
 
     reader.readAsDataURL(profile.files[0])
 }else{
-    window.location.href="./dynamic.html"
+    window.location.href="../dynamic/dynamic.html"
 
 
 }

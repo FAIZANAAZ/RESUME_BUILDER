@@ -35,16 +35,17 @@ form?.addEventListener("submit", (e) => {
     localStorage.setItem("languagech", language.value);
     localStorage.setItem("adrass_citych", city.value);
     localStorage.setItem("countrych", country.value);
+    
     if (profile.files && profile.files[0]) {
         let reader = new FileReader();
         reader.onload = function () {
             const baseimag = reader.result;
             localStorage.setItem("from_profilepic", baseimag);
-            window.location.href = "./dynamic.html";
+            window.location.href = "../dynamic/dynamic.html";
         };
         reader.readAsDataURL(profile.files[0]);
     }
     else {
-        window.location.href = "./dynamic.html";
+        window.location.href = "../dynamic/dynamic.html";
     }
 });
