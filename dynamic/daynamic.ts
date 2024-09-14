@@ -1,5 +1,5 @@
 window.addEventListener("load",()=>{
-    let name = localStorage.getItem("username")
+    let name :any= localStorage.getItem("username")
     document.getElementById("username")!.textContent=name
 
     let titlech = localStorage.getItem("titlech")
@@ -49,8 +49,34 @@ window.addEventListener("load",()=>{
  (       document.getElementById("from_profilepic")! as HTMLImageElement).src=profilee
 
     }
+
+
+
     
+
+  
+  const username = name ? name.toLowerCase().replace(/\s+/g, '-') : 'user'; // Generate username from the name
+  const baseUrl = 'http://http://127.0.0.1:5500/dynamic/dynamic.html'; // Your Vercel deployment URL
+  const uniqueResumeUrl = `${baseUrl}?/${username}`; // Create unique URL
+
+  // Set the resume link in the DOM
+  const resumeLink = document.getElementById('resumeLink') as HTMLAnchorElement;
+  resumeLink.setAttribute('href', uniqueResumeUrl);
+  resumeLink.textContent = "Shareable Resume URL";
+
+
+
+
+ // Copy link to clipboard functionality
+ document.getElementById('copyLinkBtn')!.addEventListener('click', () => {
+   navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
+     alert('Resume link copied to clipboard!');
+   });
+ });
+
 })
+    
+
 // for edit cv
 document.getElementById("editbtn")!.addEventListener("click",()=>{
     window.history.back()
@@ -71,4 +97,6 @@ document.getElementById("printbtn")!.addEventListener("click",()=>{
 
     window.location.reload()
 })
+
+// for link build
 

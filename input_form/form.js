@@ -35,7 +35,6 @@ form?.addEventListener("submit", (e) => {
     localStorage.setItem("languagech", language.value);
     localStorage.setItem("adrass_citych", city.value);
     localStorage.setItem("countrych", country.value);
-    
     if (profile.files && profile.files[0]) {
         let reader = new FileReader();
         reader.onload = function () {
