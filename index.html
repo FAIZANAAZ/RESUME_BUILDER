@@ -6,7 +6,56 @@
     <title>Hackathon</title>
   
     <link rel="stylesheet" href="src/output.css">
-    <style>
+    <!-- Your original code remains the same, I'll add media queries at the end -->
+
+<style>
+  /* Your original styles remain the same */
+
+  /* Media queries for responsive design */
+/* 
+  @media (max-width: 500px){
+.cvpic{
+  width:100px ;
+  height: 200px;
+  
+
+}
+.cvst{
+ display: none;
+}
+
+
+header{
+  padding-left: 10px;
+}
+
+header h1 .toppre{
+font-size: 30px;
+position: relative;
+
+
+
+}
+header  .toppic{
+display: none;
+}
+
+.stbtn{
+  font-size: 15px;
+  position: absolute;
+  left: 0px;
+  width: 200px;
+  margin-left: 10px;
+}
+.stperadiv{
+  height: 100px;
+  width: 300px;
+}
+body{
+  height: 100px;
+}
+  } */
+
 @keyframes gradientSlide {
   0% {
     background-position: 0% 50%;
@@ -43,18 +92,18 @@ span{
 </head>
 <body class="animated-bg ">
     <section class="w-full h-lvh  ">
- <header class="h-[130px] p-5 justify-between flex items-center pl-[50px]">
-    <h1 class="text-[60px] mt-[70px] " style=" color: transparent; -webkit-text-stroke: 2px black;  "  id="heading"><pre><span>🖤Resume Builder By </span> 
+ <header class="h-[130px]  p-5 justify-between flex items-center pl-[50px]">
+    <h1 class="text-[60px] mt-[70px] " style=" color: transparent; -webkit-text-stroke: 2px black;  "  id="heading"><pre class="toppre"><span>🖤Resume Builder By </span> 
           <span>FAIZA NAAZ 🖤</span></pre></h1>
-    <div style="background-image: url(profile-pic.jfif); background-position: center; background-size: 199px; background-repeat: no-repeat; " class="h-[200px] w-[200px] mt-[100px] rounded-[50%] mr-[30px]"></div>
+    <div style="background-image: url(profile-pic.jfif); background-position: center; background-size: 199px; background-repeat: no-repeat; " class="toppic h-[200px] w-[200px] mt-[100px] rounded-[50%] mr-[30px]"></div>
  </header>
- <div id="image" class="bg-transparent h-full w-full flex justify-between mt-[150px] ">
+ <div id="image" class="cvpic bg-slate-800 h-full w-[1343px] flex justify-between mt-[150px] ">
 
 
- <div class=" bg-transparent h-full  w-[45%] inline-block pl-[80px]">
+ <div class="stdiv  h-full  w-[45%] inline-block pl-[80px]">
             <div class=" first1 relative bg-transparent h-full w-[90%] flex items-center justify-center"> 
-                <a href="./static_resume/static.html"><button class="text-black font-bold tracking-[2px] text-[30px]  hover:bg-yellow-200 active:p-1.5 border-dashed border-black border-[5px] p-2 bg-yellow-400  rounded-[50px] absolute left-[80px] bottom-[440px]">STATIC RASUME</button></h1></a>
-                <div class="h-[200px]  w-[400px] bg-blue-950 p-2 flex justify-center items-center pt-4 mt-[60px]"  style="border: ridge 20px rgb(242, 245, 60);     box-shadow: 15px 15px 15px rgba(58, 58, 44, 0.973);  "><pre class="text-white font-semibold text-[20px] tracking-[1px] mt-[15px]">  "A Standard Resume focuses
+                <a href="./static_resume/static.html"><button class="stbtn text-black font-bold tracking-[2px] text-[30px]  hover:bg-yellow-200 active:p-1.5 border-dashed border-black border-[5px] p-2 bg-yellow-400  rounded-[50px] absolute left-[80px] bottom-[440px]">STATIC RASUME</button></h1></a>
+                <div class="stperadiv h-[200px]  w-[400px] bg-blue-950 p-2 flex justify-center items-center pt-4 mt-[60px]"  style="border: ridge 20px rgb(242, 245, 60);     box-shadow: 15px 15px 15px rgba(58, 58, 44, 0.973);  "><pre class="text-white font-semibold text-[20px] tracking-[1px] mt-[15px]">  "A Standard Resume focuses
   on a clean,traditional 
   format that highlights
   your professional experience
@@ -62,7 +111,7 @@ span{
                 </pre></div> 
             </div>
 
- <div class=" f1 bg-transparent   w-full h-full border-solid border-black border-[10px] rounded-[10px]" style="background-image: url(https://i.pinimg.com/736x/8b/cc/21/8bcc21b66cf28180157da30126f4541a.jpg);background-position: center; background-size: cover;">
+ <div class="cvst f1 bg-transparent   w-full h-full border-solid border-black border-[10px] rounded-[10px]" style="background-image: url(https://i.pinimg.com/736x/8b/cc/21/8bcc21b66cf28180157da30126f4541a.jpg);background-position: center; background-size: cover;">
 <div class="h-[230px]  w-[180px] posit relative left-[20px]  pt-[60px]" style="background-image: url(profile-pic.jfif); background-repeat: no-repeat; background-position: center; background-size: 200px;"></div>
   
 
@@ -73,7 +122,7 @@ span{
  
  <!-- ///////////////////////// -->
  
- <div  class="bg-transparent h-full w-[45%] mb-[20px] inline-block pl-[80px]"  >
+ <div  class="cvst bg-transparent h-full w-[45%] mb-[20px] inline-block pl-[80px]"  >
 
   <div class="bg-transparent border-solid border-black border-[10px] rounded-[10px] h-full w-[90%]" >
 <div class=" f1 w-full h-full rounded" style="background-image: url(https://i.pinimg.com/736x/7a/34/90/7a34909b049950b1a94ebc37d71e763e.jpg); background-position: center; background-size: cover;">

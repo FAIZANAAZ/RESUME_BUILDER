@@ -36,34 +36,49 @@ window.addEventListener("load", () => {
     document.getElementById('resumeLink').addEventListener('click', (event) => {
         event.preventDefault(); // Default behavior ko rok raha hai
         const username = name ? name.toLowerCase().replace(/\s+/g, '-') : 'user'; // Generate username from the name
-        const baseUrl = 'http://127.0.0.1:5500/dynamic/dynamic.html'; // Your local page URL
+        const baseUrl = 'http://127.0.0.1:5501/dynamic/dynamic.html'; // Your local page URL
         const uniqueResumeUrl = `${baseUrl}?/${username}`; // Create unique URL
-        window.location.href = uniqueResumeUrl; // Manual navigation
+        window.location.href = uniqueResumeUrl;
+        // Manual navigation
     });
     // Copy link to clipboard functionality - Moved outside
     document.getElementById('copyLinkBtn').addEventListener('click', () => {
-        const username = name ? name.toLowerCase().replace(/\s+/g, '-') : 'user'; // Generate username from the name
-        const baseUrl = 'http://127.0.0.1:5500/dynamic/dynamic.html'; // Your local page URL
+        const username = name ? name.toLowerCase().replace(/\s+/g, '-') : 'user';
+        // ismy hmny likhe ke jb hi username ay phly osko sumbmit krny pr lovercae me krna or phir osmy agr space hoto space ko -
+        // sy replace krdena 
+        const baseUrl = 'http://127.0.0.1:5501/dynamic/dynamic.html'; // Your local page URL
+        //   ismy hmny wo url likha jo dynamic page pr tha copy krky wha sy taky is url ke bad username likha ay
         const uniqueResumeUrl = `${baseUrl}?/${username}`; // Create unique URL
+        //   yha hmny dono ko combine kr dia
         navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
+            // navigator.clipboard ek web API hai jo clipboard access karnay ka tareeqa deta hai.
+            // writeText(uniqueResumeUrl) ka matlab hai ke uniqueResumeUrl jo URL variable hai, usay clipboard pe likha ja raha ha
+            // .then(() => { ... }):
+            // Kyun ke writeText ek asynchronous function hai (jo kaam background me hota hai), is liye .then lagaya gaya hai.
+            // .then ka matlab hai: jab ye kaam (text copy hona) mukammal ho jaye, tab ye block run karein.
             alert('Resume link copied to clipboard!');
         });
     });
     // for edit cv
     document.getElementById("editbtn").addEventListener("click", () => {
         window.history.back();
+        //idhar hm ne back button ka event add kiya hai or isy jb wapas aygy os page pr to wo chizen jo
+        //hmy likhin thin wo delet nhi hongi
     });
     // for print cv
     document.getElementById("printbtn").addEventListener("click", () => {
         const editdiv = document.getElementById("editdiv");
         if (editdiv) {
             editdiv.style.display = "none";
+            // isy print krty time wo sary buttons edit wagera ke print me nhi aygy
         }
         const printcontent = document.getElementById("maindiv").innerHTML;
         const orgnalcontent = document.body.innerHTML;
+        // isy print htny ke bad wo button wapas a jayga yani apni orignal halat me yani bodyka sara innerhtml yani sara kam
         document.body.innerHTML = printcontent;
         window.print();
         document.body.innerHTML = orgnalcontent;
         window.location.reload();
+        //isy wo reload bhi ho jayga taky sari changes achy sy hon
     });
 });
