@@ -102,37 +102,6 @@ window.addEventListener("load", () => {
     let name = localStorage.getItem("username");
     document.getElementById("username").textContent = name;
     // Baqi ka existing code
-    // Copy link to clipboard with `direct=true` parameter
-    // document.getElementById("copyLinkBtn")!.addEventListener("click", () => {
-    //   const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
-    //   const baseUrl = 'https://resume-theta-hazel.vercel.app//dynamic/dynamic.html'; // Local page URL
-    //   const uniqueResumeUrl = `${baseUrl}/${name}`; // Direct link with parameter
-    //   navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
-    //     alert("Resume link copied to clipboard!");
-    //     const editdiv=document.getElementById("editdiv")
-    //   });
-    // });
-    // Copy link to clipboard with `direct=true` parameter
-    document.getElementById("copyLinkBtn").addEventListener("click", () => {
-        const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
-        const baseUrl = 'https://resume-theta-hazel.vercel.app//dynamic/dynamic.html'; // Local page URL
-        const uniqueResumeUrl = `${baseUrl}/${name}?direct=true`; // Direct link with parameter
-        navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
-            alert("Resume link copied to clipboard!");
-        });
-    });
-    // Page load par direct access check karen aur edit div hide karen
-    window.addEventListener("load", () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const isDirectAccess = urlParams.get("direct") === "true";
-        if (isDirectAccess) {
-            const editdiv = document.getElementById("editdiv");
-            if (editdiv) {
-                editdiv.style.display = "none";
-            }
-        }
-        // Baqi ka existing code...
-    });
     // Color change code with localStorage
     const colorButton = document.getElementById("colorButton");
     const colorInput = document.getElementById("colorInput");
@@ -144,5 +113,15 @@ window.addEventListener("load", () => {
         colorr.style.backgroundColor = selectedColor;
         localStorage.setItem("selectedColor", selectedColor);
         // Naya color localStorage mein save ho jayega
+    });
+});
+// Copy link to clipboard with `direct=true` parameter
+document.getElementById("copyLinkBtn").addEventListener("click", () => {
+    const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
+    const baseUrl = 'https://resume-theta-hazel.vercel.app//dynamic/dynamic.html'; // Local page URL
+    const uniqueResumeUrl = `${baseUrl}/${name}`; // Direct link with parameter
+    navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
+        alert("Resume link copied to clipboard!");
+        const editdiv = document.getElementById("editdiv");
     });
 });
