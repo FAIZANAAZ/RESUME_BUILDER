@@ -118,7 +118,7 @@ window.addEventListener("load", () => {
 // Copy link to clipboard with `direct=true` parameter
 document.getElementById("copyLinkBtn").addEventListener("click", () => {
     const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
-    const baseUrl = 'http://127.0.0.1:5501/dynamic/dynamic.html'; // Local page URL
+    const baseUrl = '/dynamic/dynamic.html'; // Local page URL
     const uniqueResumeUrl = `${baseUrl}?direct=true&/${name}`; // Direct link with parameter
     navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
         alert("Resume link copied to clipboard!");
