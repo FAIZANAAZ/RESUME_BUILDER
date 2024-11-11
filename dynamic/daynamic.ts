@@ -156,6 +156,11 @@ document.getElementById("copyLinkBtn")!.addEventListener("click", () => {
 
   navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
     alert("Resume link copied to clipboard!");
+    const editdiv=document.getElementById("editdiv")
+    if (editdiv) {
+      editdiv.style.display ="none"
+      // isy print krty time wo sary buttons edit wagera ke print me nhi aygy
+  }
   });
 });
 
