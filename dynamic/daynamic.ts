@@ -151,7 +151,7 @@ window.addEventListener("load", () => {
 // Copy link to clipboard with `direct=true` parameter
 document.getElementById("copyLinkBtn")!.addEventListener("click", () => {
   const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
-  const baseUrl = '/dynamic/dynamic.html'; // Local page URL
+  const baseUrl = 'https://resume-theta-hazel.vercel.app//dynamic/dynamic.html'; // Local page URL
   const uniqueResumeUrl = `${baseUrl}?direct=true&/${name}`; // Direct link with parameter
 
   navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
