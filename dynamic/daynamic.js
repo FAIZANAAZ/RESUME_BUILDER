@@ -84,41 +84,55 @@ window.addEventListener("load", () => {
         //isy wo reload bhi ho jayga taky sari changes achy sy hon
     });
 });
-// Baqi ka existing code
-// Copy link to clipboard with `direct=true` parameter
-// document.getElementById("copyLinkBtn")!.addEventListener("click", () => {
-//   const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
-//   const baseUrl = 'https://resume-theta-hazel.vercel.app//dynamic/dynamic.html'; // Local page URL
-//   const uniqueResumeUrl = `${baseUrl}/${name}`; // Direct link with parameter
-//   navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
-//     alert("Resume link copied to clipboard!");
-//     const editdiv=document.getElementById("editdiv")
-//   });
-// });
-// Copy link to clipboard with `direct=true` parameter
-document.getElementById("copyLinkBtn").addEventListener("click", () => {
-    const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
-    const baseUrl = 'https://resume-theta-hazel.vercel.app//dynamic/dynamic.html'; // Local page URL
-    const uniqueResumeUrl = `${baseUrl}${name}?direct=true`; // Direct link with parameter
-    navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
-        alert("Resume link copied to clipboard!");
-    });
-});
 window.addEventListener("load", () => {
-    const colorr = document.getElementById("colorr"); // Ensure `colorr` is defined correctly
-    // Check direct access to hide edit div
+    const colorr = document.getElementById("colorr");
+    const defaultColor = "#c978be"; // Yeh default color hai
     const urlParams = new URLSearchParams(window.location.search);
     const isDirectAccess = urlParams.get("direct") === "true";
     if (isDirectAccess) {
-        const editdiv = document.getElementById("editdiv");
-        if (editdiv) {
-            editdiv.style.display = "none";
-        }
+        // Agar direct access hai toh saved color use karein
+        const savedColor = localStorage.getItem("selectedColor") || defaultColor;
+        colorr.style.backgroundColor = savedColor;
     }
-    // Default color
-    const defaultColor = "#c978be"; // Default color
-    const savedColor = localStorage.getItem("selectedColor") || defaultColor;
-    colorr.style.backgroundColor = savedColor;
+    else {
+        // Normal access hai toh default color set karein aur localStorage clear kar dein
+        colorr.style.backgroundColor = defaultColor;
+        localStorage.removeItem("selectedColor");
+    }
+    let name = localStorage.getItem("username");
+    document.getElementById("username").textContent = name;
+    // Baqi ka existing code
+    // Copy link to clipboard with `direct=true` parameter
+    // document.getElementById("copyLinkBtn")!.addEventListener("click", () => {
+    //   const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
+    //   const baseUrl = 'https://resume-theta-hazel.vercel.app//dynamic/dynamic.html'; // Local page URL
+    //   const uniqueResumeUrl = `${baseUrl}/${name}`; // Direct link with parameter
+    //   navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
+    //     alert("Resume link copied to clipboard!");
+    //     const editdiv=document.getElementById("editdiv")
+    //   });
+    // });
+    // Copy link to clipboard with `direct=true` parameter
+    document.getElementById("copyLinkBtn").addEventListener("click", () => {
+        const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
+        const baseUrl = 'https://resume-theta-hazel.vercel.app//dynamic/dynamic.html'; // Local page URL
+        const uniqueResumeUrl = `${baseUrl}${name}?direct=true`; // Direct link with parameter
+        navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
+            alert("Resume link copied to clipboard!");
+        });
+    });
+    // Page load par direct access check karen aur edit div hide karen
+    window.addEventListener("load", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const isDirectAccess = urlParams.get("direct") === "true";
+        if (isDirectAccess) {
+            const editdiv = document.getElementById("editdiv");
+            if (editdiv) {
+                editdiv.style.display = "none";
+            }
+        }
+        // Baqi ka existing code...
+    });
     // Color change code with localStorage
     const colorButton = document.getElementById("colorButton");
     const colorInput = document.getElementById("colorInput");
@@ -129,5 +143,6 @@ window.addEventListener("load", () => {
         const selectedColor = colorInput.value;
         colorr.style.backgroundColor = selectedColor;
         localStorage.setItem("selectedColor", selectedColor);
+        // Naya color localStorage mein save ho jayega
     });
 });
