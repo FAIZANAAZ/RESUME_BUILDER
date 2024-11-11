@@ -116,16 +116,24 @@ window.addEventListener("load", () => {
     });
 });
 // Copy link to clipboard with `direct=true` parameter
+// Copy link to clipboard with `direct=true` parameter
 document.getElementById("copyLinkBtn").addEventListener("click", () => {
     const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
     const baseUrl = 'https://resume-theta-hazel.vercel.app//dynamic/dynamic.html'; // Local page URL
-    const uniqueResumeUrl = `${baseUrl}?direct=true&/${name}`; // Direct link with parameter
+    const uniqueResumeUrl = `${baseUrl}?direct=true/${name}`; // Direct link with parameter
     navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
         alert("Resume link copied to clipboard!");
+    });
+});
+// Page load par direct access check karen aur edit div hide karen
+window.addEventListener("load", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const isDirectAccess = urlParams.get("direct") === "true";
+    if (isDirectAccess) {
         const editdiv = document.getElementById("editdiv");
         if (editdiv) {
             editdiv.style.display = "none";
-            // isy print krty time wo sary buttons edit wagera ke print me nhi aygy
         }
-    });
+    }
+    // Baqi ka existing code...
 });
