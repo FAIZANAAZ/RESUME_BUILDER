@@ -1,249 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackathon</title>
-  
-    <link rel="stylesheet" href="src/output.css">
-    <!-- Your original code remains the same, I'll add media queries at the end -->
 
-<style>
-  /* Your original styles remain the same */
-
-  /* Media queries for responsive design */
-/* 
-  @media (max-width: 500px){
-.cvpic{
-  width:100px ;
-  height: 200px;
-  
-
-}
-.cvst{
- display: none;
-}
-
-
-header{
-  padding-left: 10px;
-}
-
-header h1 .toppre{
-font-size: 30px;
-position: relative;
-
-
-
-}
-header  .toppic{
-display: none;
-}
-
-.stbtn{
-  font-size: 15px;
-  position: absolute;
-  left: 0px;
-  width: 200px;
-  margin-left: 10px;
-}
-.stperadiv{
-  height: 100px;
-  width: 300px;
-}
-body{
-  height: 100px;
-}
-  } */
-
-@keyframes gradientSlide {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animated-bg {
-  animation: gradientSlide 15s ease infinite;
-  background: linear-gradient(270deg, #dcec49, #13acac, #c74591, #e74732);
-  background-size: 200% 200%;
-}
-span{
-            text-decoration: underline;
-            text-decoration-thickness: 10px; /* Adjust the thickness of the underline */
-            text-decoration-color: black; /* Adjust the color of the underline */
-        }
-
-
-        .f1 {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .f1:hover {
-            transform: scale(1.05); /* Slightly enlarge the element */
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
-        }       
-      </style>
-</head>
-<body class="animated-bg ">
-    <section class="w-full h-lvh  ">
- <header class="h-[130px]  p-5 justify-between flex items-center pl-[50px]">
-    <h1 class="text-[60px] mt-[70px] " style=" color: transparent; -webkit-text-stroke: 2px black;  "  id="heading"><pre class="toppre"><span>🖤Resume Builder By </span> 
-          <span>FAIZA NAAZ 🖤</span></pre></h1>
-    <div style="background-image: url(profile-pic.jfif); background-position: center; background-size: 199px; background-repeat: no-repeat; " class="toppic h-[200px] w-[200px] mt-[100px] rounded-[50%] mr-[30px]"></div>
- </header>
- <div id="image" class="cvpic bg-slate-800 h-full w-[1343px] flex justify-between mt-[150px] ">
-
-
- <div class="stdiv  h-full  w-[45%] inline-block pl-[80px]">
-            <div class=" first1 relative bg-transparent h-full w-[90%] flex items-center justify-center"> 
-                <a href="./static_resume/static.html"><button class="stbtn text-black font-bold tracking-[2px] text-[30px]  hover:bg-yellow-200 active:p-1.5 border-dashed border-black border-[5px] p-2 bg-yellow-400  rounded-[50px] absolute left-[80px] bottom-[440px]">STATIC RASUME</button></h1></a>
-                <div class="stperadiv h-[200px]  w-[400px] bg-blue-950 p-2 flex justify-center items-center pt-4 mt-[60px]"  style="border: ridge 20px rgb(242, 245, 60);     box-shadow: 15px 15px 15px rgba(58, 58, 44, 0.973);  "><pre class="text-white font-semibold text-[20px] tracking-[1px] mt-[15px]">  "A Standard Resume focuses
-  on a clean,traditional 
-  format that highlights
-  your professional experience
-  and skills clearly."
-                </pre></div> 
-            </div>
-
- <div class="cvst f1 bg-transparent   w-full h-full border-solid border-black border-[10px] rounded-[10px]" style="background-image: url(https://i.pinimg.com/736x/8b/cc/21/8bcc21b66cf28180157da30126f4541a.jpg);background-position: center; background-size: cover;">
-<div class="h-[230px]  w-[180px] posit relative left-[20px]  pt-[60px]" style="background-image: url(profile-pic.jfif); background-repeat: no-repeat; background-position: center; background-size: 200px;"></div>
+ <html>
+  <head>
+   <title>
+    Resume Builder
+   </title>
+   <script src="https://cdn.tailwindcss.com">
+   </script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+   <style>
+    body {
+             font-family: 'Roboto', sans-serif;
+         }
+         .gradient-bg {
+             background: linear-gradient(90deg, rgb(255, 58, 212) 0%, rgb(155, 8, 160) 100%);
+         }
+         .gradient-text {
+             background: linear-gradient(90deg, rgb(141, 13, 141) 0%, rgb(208, 90, 219) 100%);
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+         }
+         .hover-gradient-bg:hover {
+             background: linear-gradient(90deg, rgb(185, 108, 179) 0%, rgb(199, 56, 187) 100%);
+         }
+         .hover-border-gradient:hover {
+             border-color: rgb(182, 80, 212);
+         }
+   </style>
+  </head>
+  <body class="bg-white text-gray-800">
+   <header class="flex justify-between pt-0 items-center p-2 pr-7">
+    <div class="flex items-center">
+     <img alt="Logo" class="mr-2" height="70" src="pngegg.png" width="60"/>
+     <span class="text-[40px] font-bold gradient-text">
+      Resume Builder
+     </span>
+    </div>
+    <nav class="ml-[200px] space-x-6">
+     <a class="text-gray-600 text-[25px] hover:text-gray-800 font-bold" href="/index.html">
+      Home
+     </a>
+     <a class="text-gray-600 text-[25px] hover:text-gray-800 font-bold" href="/tamplates/contact.html">
+      Contact
+     </a>
+    </nav>
+    <a class="px-4 py-2 text-white rounded gradient-bg hover-gradient-bg" href="/input_form/form.html">
+ Get Started
+    </a>
+   </header>
+   <main class="flex items-center justify-center h-[calc(100vh-144px)]">
+    <div class="flex  justify-between">
+     <div class="relative mr-[100px]">
+      <img alt="Resume example" class="rounded-lg " height="600" src="manpic.jpg" width="395"/>
+    <div class="h-[70px] w-[70px] absolute left-[180px] top-[70px] rounded-[50%]" style="background-image: url(profile-pic.jfif);background-position: center; background-size: cover;"></div>
+     
+     </div>
+     <div class="ml-[50px] mt-[40px] text-left">
+      <h1 class="text-[40px] font-extrabold mb-4">
+       The Best Online Resume Builder
+      </h1>
+      <p class="text-base mb-6 font-bold">
+       Easily create the perfect resume for any job using our <br> best-in-class resume builder platform.
+      </p>
+      <div class="flex space-x-4 mt-[40px]">
+       <a href="./input_form/form.html"><button class="px-6 py-3 text-white rounded gradient-bg hover-gradient-bg">
+        Create Your Resume Now
+       </button></a>
+       <a href="./static_resume/static.html"><button class="px-6 py-3 text-purple-600 border border-purple-600 rounded hover-gradient-bg hover:text-white">
+       View  Static Resume
+       </button></a>
+      </div>
+      <div class="flex space-x-8 mt-8">
+       <div class="text-center">
+        <p class="text-2xl font-bold text-purple-600">
+         + 38%
+        </p>
+        <p class="text-gray-600 text-sm">
+         more interviews
+        </p>
+       </div>
+       <div class="text-center">
+        <p class="text-2xl font-bold text-purple-600">
+         + 23%
+        </p>
+        <p class="text-gray-600 text-sm">
+         more likely to get a job offer
+        </p>
+       </div>
+      </div>
   
 
-</div>  
+     </div>
+    </div>
+   </main>
 
+   <footer class="flex items-center justify-between pr-[50px] pl-[100px] w-[100%] bg-[#2e082e] space-x-5 pb-5 pt-5">
+   <div class="flex space-x-5"> <a href="https://www.facebook.com" target="_blank">
+     <box-icon name='facebook-square' type='logo' color='#214ba0' class="h-[50px] w-[50px]"></box-icon>
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <box-icon name='instagram-alt' type='logo' color='rgba(197,19,19,0.86)' class="h-[50px] w-[50px]" ></box-icon>
+    </a>
+    <a href="https://www.twitter.com" target="_blank">
+      <box-icon name='twitter' type='logo' color='rgba(45,164,236,0.86)'  class="h-[50px] w-[50px]"></box-icon>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+      <box-icon name='linkedin-square' type='logo' color='rgba(45,86,236,0.86)' class="h-[50px] w-[50px]"></box-icon>
+    </a></div>
 
- </div>
- 
- <!-- ///////////////////////// -->
- 
- <div  class="cvst bg-transparent h-full w-[45%] mb-[20px] inline-block pl-[80px]"  >
+    <h1 class="text-[30px] text-[#e6d4e0]  " id="heading"><pre class="toppre">🧾Resume Builder By <span class="text-[#c97bc9]">FAIZA NAAZ🧾 </span></pre></h1>
+   </footer> 
 
-  <div class="bg-transparent border-solid border-black border-[10px] rounded-[10px] h-full w-[90%]" >
-<div class=" f1 w-full h-full rounded" style="background-image: url(https://i.pinimg.com/736x/7a/34/90/7a34909b049950b1a94ebc37d71e763e.jpg); background-position: center; background-size: cover;">
-  <div class="h-[115px]  w-[115px] bg-black relative left-[293px] top-[35px] pt-[50px]" style="background-image: url(profile-pic.jfif); background-repeat: no-repeat; background-position: center; background-size: 130px;"></div>
-</div>
-
-
-   
-<div  class=" first2 relative bg-transparent w-[90%] h-full flex items-center justify-center"> 
-  <a href="./input_form/form.html"><button class="text-black font-bold tracking-[2px] text-[30px]  hover:bg-red-400 active:p-1.5 border-dashed border-black border-[5px] p-2 bg-red-600  rounded-[50px] absolute left-[35px] bottom-[410px]">STANDARD RASUME</button></h1></a>
-  <div  class="h-[200px]  w-[400px] bg-blue-950 p-2 flex justify-center items-center pt-4 mt-[80px]"  style="border: ridge 20px rgb(230, 29, 29);     box-shadow: 15px 15px 15px  rgba(58, 58, 44, 0.973);  "><pre class="text-white font-semibold text-[20px] tracking-[1px] mt-[40px]">  "A Modern Resume combines 
-creative design elements 
-with structured content 
-to make your profile stand
-out visually."
-
-  </pre></div>
-</div>
-
-</section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="page.js"></script>
-
-</body>
-</html>
-
-<!-- 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackathon</title>
-  
-    <link rel="stylesheet" href="src/output.css">
-    <style>
-@keyframes gradientSlide {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animated-bg {
-  animation: gradientSlide 15s ease infinite;
-  background: linear-gradient(270deg, #dcec49, #13acac, #c74591, #e74732);
-  background-size: 200% 200%;
-}
-
-span {
-  text-decoration: underline;
-  text-decoration-thickness: 10px;
-  text-decoration-color: black;
-}
-
-.f1 {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.f1:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-}
-</style>
-</head>
-<body class="animated-bg">
-    <section class="w-full h-lvh">
-        <header class="h-[130px] p-5 flex flex-col lg:flex-row justify-between items-center pl-[50px]">
-            <h1 class="text-[40px] lg:text-[60px] mt-[30px] lg:mt-[70px]" style="color: transparent; -webkit-text-stroke: 2px black;" id="heading">
-                <pre><span>🖤Resume Builder By </span> 
-                <span>FAIZA NAAZ 🖤</span></pre>
-            </h1>
-            <div style="background-image: url(profile-pic.jfif); background-position: center; background-size: 199px; background-repeat: no-repeat;" class="h-[150px] w-[150px] lg:h-[200px] lg:w-[200px] mt-[30px] lg:mt-[100px] rounded-[50%]"></div>
-        </header>
-
-        <div id="image" class="bg-transparent h-full w-full flex flex-col lg:flex-row justify-between mt-[50px] lg:mt-[150px]">
-            <div class="bg-transparent h-full w-full lg:w-[45%] inline-block pl-[20px] lg:pl-[80px] mb-5 lg:mb-0">
-                <div class="first1 relative bg-transparent h-full w-[90%] flex items-center justify-center"> 
-                    <a href="./static_resume/static.html">
-                        <button class="text-black font-bold tracking-[2px] text-[20px] lg:text-[30px] hover:bg-yellow-200 active:p-1.5 border-dashed border-black border-[5px] p-2 bg-yellow-400 rounded-[50px] absolute left-[20px] lg:left-[80px] bottom-[140px] lg:bottom-[440px]">STATIC RESUME</button>
-                    </a>
-                    <div class="h-[150px] lg:h-[200px] w-[250px] lg:w-[400px] bg-blue-950 p-2 flex justify-center items-center pt-4 mt-[20px] lg:mt-[60px]" style="border: ridge 20px rgb(242, 245, 60); box-shadow: 15px 15px 15px rgba(58, 58, 44, 0.973);">
-                        <pre class="text-white font-semibold text-[15px] lg:text-[20px] tracking-[1px] mt-[10px] lg:mt-[15px]">
-"A Standard Resume focuses
-on a clean, traditional
-format that highlights
-your professional experience
-and skills clearly."
-                        </pre>
-                    </div> 
-                </div>
-            </div>
-
-            <div class="bg-transparent h-full w-full lg:w-[45%] inline-block pl-[20px] lg:pl-[80px] mb-[20px]">
-                <div class="bg-transparent border-solid border-black border-[10px] rounded-[10px] h-full w-[90%]">
-                    <div class="f1 w-full h-full rounded" style="background-image: url(https://i.pinimg.com/736x/7a/34/90/7a34909b049950b1a94ebc37d71e763e.jpg); background-position: center; background-size: cover;">
-                        <div class="h-[100px] lg:h-[115px] w-[100px] lg:w-[115px] bg-black relative left-[50px] lg:left-[293px] top-[35px]" style="background-image: url(profile-pic.jfif); background-repeat: no-repeat; background-position: center; background-size: 130px;"></div>
-                    </div>
-                    <div class="first2 relative bg-transparent w-[90%] h-full flex items-center justify-center">
-                        <a href="./input_form/form.html">
-                            <button class="text-black font-bold tracking-[2px] text-[20px] lg:text-[30px] hover:bg-red-400 active:p-1.5 border-dashed border-black border-[5px] p-2 bg-red-600 rounded-[50px] absolute left-[20px] lg:left-[35px] bottom-[120px] lg:bottom-[410px]">STANDARD RESUME</button>
-                        </a>
-                        <div class="h-[150px] lg:h-[200px] w-[250px] lg:w-[400px] bg-blue-950 p-2 flex justify-center items-center pt-4 mt-[30px] lg:mt-[80px]" style="border: ridge 20px rgb(230, 29, 29); box-shadow: 15px 15px 15px rgba(58, 58, 44, 0.973);">
-                            <pre class="text-white font-semibold text-[15px] lg:text-[20px] tracking-[1px] mt-[10px] lg:mt-[40px]">
-"A Modern Resume combines 
-creative design elements
-with structured content
-to make your profile stand
-out visually."
-                            </pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-</html> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js" integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+ </html>

@@ -6,103 +6,156 @@
     <title>DAYNAMIC_RESUME</title>
     <link rel="stylesheet" href="../src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style>
+    <style>
+  
+   
+      /* Hidden color input ko style */
+     
 
-
-@media print {
-    #editdiv {
-        display: none;
-    }
-}
-
-
-
-</style>
+      #colorInput.show {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensures it appears above other content */
+  }
+      </style>
 
 
 
 
 </head>
-<body class="m-0 p-0 bg-white box-border flex justify-center items-start flex-col">
-    <!-- Main Container -->
-    <div id="maindiv" class=" w-[70%] mt-[40px] mb-[50px] p-[5px] pl-[20px] pr-[20px] bg-slate-400 relative left-[200px] flex flex-col">
-        <!-- Personal Information Section -->
-        <section class="bg-yellow-500 p-[5px] w-full">
-            <div class="flex justify-between items-center">
-                <!-- Name and Title -->
-                <div class="text-white">
-                    <h1 id="username" class="underline text-[80px] ml-[10px] font-bold" style="-webkit-text-stroke: 3px black; color: aqua;"><span>FAIZA NAAZ</span></h1>
-                    <h2 id="titlech" class="underline text-black font-bold text-[40px] mt-[4px] ml-[30px]"><span>SOFTWARE ENGINEER</span></h2>
-                </div>
-                <!-- Profile Picture -->
-                <img id="from_profilepic" class="w-[200px] h-[200px] mt-[10px] mr-[10px] object-cover" src="" alt="Profile Picture">
-            </div>
-            <!-- Contact Details -->
-            <div class="flex  items-center  text-[20px] font-bold bg-slate-500 p-[20px] mt-[20px] border-t-2 border-b-2 border-black">Phone: <p class="inline-block ml-[10px] font-bold text-[20px] " id="numbercha"> <i class="fa-solid fa-mobile-screen">Phone:</i> <span>03168909876</span></p> &nbsp;&nbsp;&nbsp;Email:
-                <p id="emailch" class="inline-block ml-[10px] font-bold text-[20px]"><i class="fa-solid fa-envelope"></i> <span>faizanaaz@gmail.com</span></p>
-                &nbsp;&nbsp;&nbsp;LinkedIn:
-                <p id="linkinch" class="inline-block ml-[10px] font-bold text-[20px] "><i class="fa-brands fa-linkedin"></i>  <span>www.linkedin.com/faizanaaz17396</span></p>
-            </div>
-        </section>
+<body class="m-0 p-0 w-[100%] bg-purple-300 box-border flex justify-center items-start "> 
+  
+<div class="flex flex-col ">
+   <main id="maindiv" class="w-[100%]   mt-[40px] mb-[50px]  bg-white  flex flex-row ">
 
-        <!-- Education Section -->
-        <section class="w-full mt-[20px] secedu text-[30px] text-center font-bold">
-          <h2 class="text-[40px] font-bold bg-yellow-500 p-[5px] border-2 border-black">Education</h2> <u>DEGREE</u><p id="degreech" class="text-[20px]  mt-[10px] mb-[5px] ml-[10px] font-bold"><i class="fa-regular fa-circle"></i><span>Bachelor in Computer Science</span></p><u>INSTITUDE</u>
-            <pre id="institutech" class="text-[25px] mt-[5px] mb-[5px] ml-[10px] font-bold">  <span>***from Karachi University</span></pre><u>YEAR OF GRADUTION</u>
-            <pre id="yearch" class="text-[25px] mt-[5px] mb-[5px] ml-[10px] font-bold">  <span>***(2024)</span></pre>
-        </section>
+    <section class="  w-[40%] bg-[#c978be]" id="colorr">
+        <div class="flex flex-col justify-between items-center">
+            
+            <!-- Profile Picture -->
+            <img id="from_profilepic" class="w-[200px] h-[200px] mt-[10px] mr-[10px] object-cover" src="/profile-pic.jfif" alt="Profile Picture">
+            <!-- Name and Title -->
+             <div class="text-white">
+                <h1 id="username" class="underline text-center text-[35px] mt-[20px] font-bold" style="-webkit-text-stroke: 2px black; color: rgb(255, 255, 255);"><span>FAIZA NAAZ</span></h1>
+                <h2 id="titlech" class="underline text-black font-bold text-[20px] text-center mt-[4px] "><span>SOFTWARE ENGINEER</span></h2>
+            </div> 
+            
+        </div> 
+        <h1 class=" text-white font-bold text-[25px] text-center mt-[20px] bg-black" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ">Contact Me</h1>
+         <!-- Contact Details -->
+         <div class="flex flex-col items-start text-[20px] font-bold p-[20px] ">
+  
+            <!-- Phone Section -->
+            <div class="flex flex-wrap items-center font-bold text-[20px]" ><i class="fa-solid fa-mobile-screen mr-2"></i>Phone:&nbsp;&nbsp;
+               <!-- Mobile Icon -->
+              <span id="numbercha" class="text-[15px] font-semibold text-gray-900 "> 03168909876</span>
+            </div>
+          
+            <!-- Email Section -->
+            <div class="flex flex-wrap items-center font-bold text-[20px] mt-2" >
+              
+              <i class="fa-solid fa-envelope  mr-2"></i>Email: &nbsp;&nbsp;  <!-- Email Icon -->
+              <span id="emailch" class="text-[15px] font-semibold text-gray-900 ">faizanaaz@gmail.com</span>
+            </div>
+          
+            <!-- LinkedIn Section -->
+            <div class="flex flex-wrap items-center font-bold text-[20px] mt-2" >
+            
+              <i class="fa-brands fa-linkedin  mr-2"></i>  LinkedIn:&nbsp;&nbsp;  <!-- LinkedIn Icon -->
+              <span class="text-[15px] font-semibold text-gray-900" id="linkinch">www.linkedin.com/faizanaaz17396</span>
+            </div>
+          
+          </div>
+          
+<!-- address -->
+                   <section class="w-full text-center text-[30px] font-bold sec-address ">
+                 
+            <h1 class=" text-white font-bold text-[25px] text-center  bg-black" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ">Address</h1>
 
-        <!-- Skills Section -->
-        <section class="w-full text-center text-[25px] mt-[20px] font-bold secskill">
-            <h2 class="text-[40px] font-bold bg-yellow-500 p-[5px] border-2 border-black">Skills</h2>
-            <ul id="skillsch"  class="list-none mt-[10px] pl-[10px]">
-                <li class="text-[20px] mt-[10px] mb-[5px] font-bold"><span>1. Javascript</span></li>
-                <li class="text-[20px] mt-[10px] mb-[5px] font-bold"><span>2. Typescript</span></li>
-                <li class="text-[20px] mt-[10px] mb-[5px] font-bold"><span>3. Python</span></li>
-                <li class="text-[20px] mt-[10px] mb-[5px] font-bold"><span>4. HTML & CSS</span></li>
-                <li class="text-[20px] mt-[10px] mb-[5px] font-bold"><span>5. React</span></li>
-                <li class="text-[20px] mt-[10px] mb-[5px] font-bold"><span>6. Next.js</span></li>
-            </ul>
-        </section>
+            <div class="flex  mb-[45px] mt-[20px]">
+            <div >
+            <p class="text-start text-black ml-[20px] text-[20px]"><u>COUNTRY</u></p>
+            <p id="countrych" class="text-[15px]  mb-[5px] ml-[20px]  text-start font-semibold text-gray-900"><i class="fa-regular fa-circle"></i> <span> Pakistan</span></p>
+        </div>
+
+        <div >
+            <p class="text-start text-black ml-[20px] text-[20px]"><u>CITY</u></p>
+            <p id="adrass_citych" class="text-[15px]  mb-[5px] ml-[20px]  text-start font-semibold text-gray-900"><i class="fa-regular fa-circle"></i> <span> Karachi</span></p>
+        </div>
+    </div>
+        </section> 
+
+    </section>
+
+    <!-- sec2 -->
+
+     <section  class=" w-[60%] bg-white ">
+        <section class="w-full  secedu text-[30px] text-center text-white font-bold">
+            <h2 class="text-[25px] font-bold bg-black p-[5px] border-2 border-black">Education</h2> <p class="text-start ml-[20px] mt-[20px] text-[black] text-[20px]"><u >DEGREE</u></p><p id="degreech" class="text-[15px]   mb-[5px] ml-[20px]  text-start font-semibold text-gray-900"><i class="fa-regular fa-circle"></i><span>Bachelor in Computer Science</span></p><p class="text-start text-black ml-[20px] text-[20px]"><u>INSTITUDE</u></p>
+              <p id="institutech" class="text-[15px]  mb-[5px] ml-[20px]  text-start font-semibold text-gray-900"><i class="fa-regular fa-circle"></i>  <span>from Karachi University</span></p><p class="text-start text-black ml-[20px] text-[20px]"><u>YEAR OF GRADUTION</u></p>
+              <pre id="yearch" class="text-[20px]  mb-[5px]   text-start font-semibold text-gray-900 ml-[20px]"><i class="fa-regular fa-circle"></i> <span>(2024)</span></pre>
+          </section>
 
         <!-- Work Experience Section -->
-        <section class="w-full mt-[20px] secwork text-center text-[30px] font-bold ">
-            <h2 class="text-[40px] font-bold bg-yellow-500 p-[5px] border-2 border-black">Work Experience</h2><u>COMPANY</u>
-            <p id="companych" class="text-[25px] mt-[10px] mb-[5px] ml-[10px] font-bold"><i class="fa-regular fa-circle"></i> <span>Software Developer at TechWave Solutions </span></p>
-            <u>YEAR</u>
-            <p id="company_yearch" class="text-[25px] mt-[10px] mb-[5px] ml-[10px] font-bold"><span>(2022-2024)</span></p>
+        
+          <section class="w-full mt-[20px] secwork text-start text-[30px] font-bold ">
+            <h2 class="text-[25px] font-bold bg-black p-[5px] border-2 border-black text-white text-center">Work Experience</h2><p class="text-start text-black ml-[20px] text-[20px] mt-[20px]"><u>COMPANY</u></p>
+            <p id="companych"class="text-[15px]  mb-[5px]  font-semibold text-gray-900 text-start text-black ml-[20px]"><i class="fa-regular fa-circle"></i> <span>Software Developer at TechWave Solutions </span></p>
+           <p class="text-start text-black ml-[20px] text-[20px]"> <u>YEAR</u></p>
+            <p id="company_yearch" class="text-[20px]  mb-[5px]   text-start font-semibold text-gray-900 ml-[20px]"><i class="fa-regular fa-circle"></i><span class="">(2022-2024)</span></p>
+        </section>  
+
+
+                <!-- Skills Section -->
+        <section class="w-full  mt-[20px] font-bold  secskill">
+            <h2 class="text-[25px] font-bold bg-black p-[5px] border-2 border-black text-white text-center">Skills</h2>
+            <ul id="skillsch"  class="list-none font-semibold text-gray-900 mt-[10px] pl-[10px] flex flex-wrap">
+
+                
+                <li class="text-[25px] mt-[10px]   "><span>1. Javascript</span></li>
+               
+            </ul>
         </section>
 
         <!-- Languages Section -->
-        <section class="w-full text-center mt-[20px] sec-lang">
-            <h2 class="text-[40px] font-bold bg-yellow-500 p-[5px] border-2 border-black">Languages</h2>
-            <ul class="list-none pl-[10px]">
-                <li id="languagech" class="text-[25px]  mt-[10px] mb-[5px] font-bold"><span>English ,Urdu</span></li>
+          <section class="w-full  mt-[20px] sec-lang">
+            <h2 class="text-[25px] font-bold bg-black p-[5px] border-2 border-black text-white text-center">Languages</h2>
+            <ul class="list-none flex flex-wrap">
+                <li id="languagech" class="text-[20px] mt-[20px] font-semibold text-gray-900 mb-[20px] text-start ml-[10px]"><span>English ,Urdu</span></li>
              
             </ul>
-        </section>
+        </section>  
 
-        <!-- Address Section -->
-        <section class="w-full mt-[20px] text-center text-[30px] font-bold sec-address">
-            <h2 class="text-[40px] font-bold bg-yellow-500 p-[5px] border-2 border-black">Address</h2><u>COUNTRY</u>
-            <p id="countrych" class="text-[25px] mt-[10px] mb-[5px] ml-[10px] font-bold"><i class="fa-regular fa-circle"></i> <span> Pakistan</span></p><u>CITY</u>
-            <p id="adrass_citych" class="text-[25px] mt-[10px] mb-[5px] ml-[10px] font-bold"><i class="fa-regular fa-circle"></i> <span> Karachi</span></p>
-
-        </section>
-    </div>
-    <!-- edit button -->
-<div id="editdiv" class="ml-[240px] mb-[100px]">
-
-<button id="printbtn" class="btne bg-yellow-400 hover:bg-yellow-300 w-[180px] h-[70px] border-solid border-2 border-black rounded-[10px] text-[30px] font-bold text-black" >PRINT</button>
-<button id="editbtn" class="btne bg-yellow-400 hover:bg-yellow-300 w-[180px] h-[70px] border-solid border-2 border-black rounded-[10px] text-[30px] font-bold text-black" >EDIT</button>
+    </section>
     
-<a href="#" id="resumeLink" class="btn bg-yellow-400 hover:bg-yellow-300 w-[180px] h-[80px] border-solid border-2 border-black rounded-[10px] text-[30px] font-bold text-black">Shareable Resume Link</a>
+   </main>
 
-<button class="btn  bg-yellow-400 hover:bg-yellow-300 w-[180px] h-[70px] border-solid border-2 border-black rounded-[10px] text-[30px] font-bold text-black" id="copyLinkBtn">Copy Link</button>
+   <div id="editdiv" class="ml-[50px] mb-[100px] items-center">
+
+    <button id="printbtn" class="btne text-white bg-[#be40be] hover:text-black hover:bg-[#ee9aee]  w-[160px] h-[60px] border-solid border-2 border-black rounded-[10px] text-[20px] font-bold " >PRINT</button>
+    <button id="editbtn" class="btne  text-white bg-[#be40be] hover:text-black hover:bg-[#ee9aee] w-[160px] h-[60px] border-solid border-2 border-black rounded-[10px] text-[20px] font-bold " >EDIT</button>
+        
+    <!-- <a href="#" id="resumeLink" class="btn text-white bg-[#be40be] hover:text-black hover:bg-[#ee9aee] w-[160px] border-solid border-2 border-black rounded-[10px] p-4 text-[20px] font-bold ">Shareable Resume Link</a> -->
+    
+    <button class="btn  text-white bg-[#be40be] hover:bg-[#ee9aee] hover:text-black w-[160px] h-[60px] border-solid border-2 border-black rounded-[10px] text-[20px] font-bold " id="copyLinkBtn">Copy Link</button>
+    
+    
+
+ 
+</div>
 </div>
 
-  
-    <script src="daynamic.js"></script>
+<div class="absolute top-[400px] right-[60px] flex flex-col" > 
+  <!-- Hidden color picker input -->
+  <input type="color" id="colorInput" class="p-1 bg-[#be40be] mb-[10px] w-[200px]">
+  <button id="colorButton" class=" text-black  border-black border-solid  hover:text-white  border-2  rounded-[10px] p-1 text-[20px] font-bold ">Select Resume Color</button>
+
+</div>
+ 
+      
+        <script src="daynamic.js"></script> 
     
 </body>
-</html>
+
+</html> 

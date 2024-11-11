@@ -17,8 +17,6 @@ let company = document.getElementById("company");
 let years = document.getElementById("years");
 let language = document.getElementById("language");
 let profile = document.getElementById("profile-pic");
-// let inputfname :any=document.getElementById("inputfname")
-// let inputfname :any=document.getElementById("inputfname")
 form?.addEventListener("submit", (e) => {
     e.preventDefault();
     localStorage.setItem("username", inputfname.value);
@@ -36,15 +34,25 @@ form?.addEventListener("submit", (e) => {
     localStorage.setItem("adrass_citych", city.value);
     localStorage.setItem("countrych", country.value);
     if (profile.files && profile.files[0]) {
+        // yha hmny kha ke agr profile me koi file ho or 0 index pr ho to hi ye chly empty na chaly
         let reader = new FileReader();
+        // ye file read krta he ke picture a gai
         reader.onload = function () {
+            // ismy hmny kha ke jb file read hoto load ka func chaly yani submit hony pr ye kam ho osy phly na ho submit hota he to file load hoti hi  he
             const baseimag = reader.result;
+            // ismy hmny kha ke jb file read ho jay to wo reader.result yani jo result ay wo chang ho jay string me kioky hm
+            // hm agr ak pic ki jga dosri pic laygy to string ki sorat me hi set kr skty hen wesy hi nhi kr skty
             localStorage.setItem("from_profilepic", baseimag);
+            //yeto normal ak name diya or local storage me set kiya or string wali pic ko ismy rkha yani ismy file nhi aygi 
+            // blky picture string me aygi set hogi
             window.location.href = "../dynamic/dynamic.html";
         };
         reader.readAsDataURL(profile.files[0]);
+        // ye dena zarori hota he wrna load event kam ni krta ismy hm btaty ke ye name he isi me jo file aygi ospr kam krna jesy
+        // abhi to ak he kabhi esa ho ke ak sy zada files ke options hon to hm btaygy ismy adress
     }
     else {
         window.location.href = "../dynamic/dynamic.html";
+        // ismy hmny kha agr na ho pic to bhi dosry page me chala jay wo bina pic ke
     }
 });
