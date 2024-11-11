@@ -108,42 +108,11 @@ window.addEventListener("load", () => {
 
 });
 });
-window.addEventListener("load", () => {
-  const colorr = document.getElementById("colorr") as HTMLInputElement;
-  const defaultColor = "#c978be"; // Yeh default color hai
-  const urlParams = new URLSearchParams(window.location.search);
-  const isDirectAccess = urlParams.get("direct") === "true";
 
-  if (isDirectAccess) {
-    // Agar direct access hai toh saved color use karein
-    const savedColor = localStorage.getItem("selectedColor") || defaultColor;
-    colorr.style.backgroundColor = savedColor;
-  } else {
-    // Normal access hai toh default color set karein aur localStorage clear kar dein
-    colorr.style.backgroundColor = defaultColor;
-    localStorage.removeItem("selectedColor");
-  }
-
-  let name: any = localStorage.getItem("username");
-  document.getElementById("username")!.textContent = name;
 
   // Baqi ka existing code
 
-  // Color change code with localStorage
-  const colorButton = document.getElementById("colorButton") as HTMLButtonElement;
-  const colorInput = document.getElementById("colorInput") as HTMLInputElement;
-
-  colorButton.addEventListener("click", () => {
-    colorInput.click();
-  });
-
-  colorInput.addEventListener("input", () => {
-    const selectedColor = colorInput.value;
-    colorr.style.backgroundColor = selectedColor;
-    localStorage.setItem("selectedColor", selectedColor);
-    // Naya color localStorage mein save ho jayega
-  });
-});
+ 
 
 
 
@@ -162,19 +131,10 @@ window.addEventListener("load", () => {
 // });
 
 // Copy link to clipboard with `direct=true` parameter
-document.getElementById("copyLinkBtn")!.addEventListener("click", () => {
-  const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';
-  const baseUrl = 'https://resume-theta-hazel.vercel.app//dynamic/dynamic.html'; // Local page URL
-  const uniqueResumeUrl = `${baseUrl}?direct=true${name}`; // Direct link with parameter
-
-  navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
-    alert("Resume link copied to clipboard!");
-    const editdiv=document.getElementById("editdiv")
-  });
-});
-
-// Page load par direct access check karen aur edit div hide karen
 window.addEventListener("load", () => {
+  const colorr = document.getElementById("colorr") as HTMLElement; // Ensure `colorr` is defined correctly
+
+  // Check direct access to hide edit div
   const urlParams = new URLSearchParams(window.location.search);
   const isDirectAccess = urlParams.get("direct") === "true";
 
@@ -185,5 +145,22 @@ window.addEventListener("load", () => {
     }
   }
 
-  // Baqi ka existing code...
+  // Default color
+  const defaultColor = "#c978be"; // Default color
+  const savedColor = localStorage.getItem("selectedColor") || defaultColor;
+  colorr.style.backgroundColor = savedColor;
+
+  // Color change code with localStorage
+  const colorButton = document.getElementById("colorButton") as HTMLButtonElement;
+  const colorInput = document.getElementById("colorInput") as HTMLInputElement;
+
+  colorButton.addEventListener("click", () => {
+    colorInput.click();
+  });
+
+  colorInput.addEventListener("input", () => {
+    const selectedColor = colorInput.value;
+    colorr.style.backgroundColor = selectedColor;
+    localStorage.setItem("selectedColor", selectedColor);
+  });
 });
