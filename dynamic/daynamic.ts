@@ -145,9 +145,6 @@ window.addEventListener("load", () => {
   });
 });
 
-
-
-
 // Copy link to clipboard with `direct=true` parameter
 document.getElementById("copyLinkBtn")!.addEventListener("click", () => {
   const name = localStorage.getItem("username")?.toLowerCase().replace(/\s+/g, '-') || 'user';

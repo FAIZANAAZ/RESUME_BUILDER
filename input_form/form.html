@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Form</title>
-    <link href="../src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .underline-double {
             border-bottom: 4px double #0a0a0a;
@@ -25,13 +25,13 @@
     </style>
 </head>
 <body class="bg-white flex items-center justify-center min-h-screen p-4">
-    <div class="w-[500px] max-w-4xl border-solid border-[5px] border-white bg-purple-300 p-6 rounded-lg">
+    <div class="w-full sm:w-[500px] max-w-4xl border-solid border-[5px] border-white bg-purple-300 p-4 sm:p-6 rounded-lg">
         <form id="form" class="space-y-4">
-            <h2 class="text-[30px] font-bold text-center ml-[120px] text-blue-900 mb-4 underline-double">Resume Form</h2>
+            <h2 class="text-2xl sm:text-[30px] font-bold text-center sm:ml-[120px] text-blue-900 mb-4 underline-double">Resume Form</h2>
             <br>
             
             <!-- Personal Information -->
-            <h3 class="text-[25px] font-bold text-black mb-2 underline-double bold-heading small-heading">Personal Information</h3>
+            <h3 class="text-xl sm:text-[25px] font-bold text-black mb-2 underline-double bold-heading small-heading">Personal Information</h3>
             <div class="mb-4">
                 <label for="first-name" class="block text-gray-900 bold-heading">Full Name:</label>
                 <input type="text" id="inputfname" name="first-name" placeholder="Please enter your first name" class="w-full p-2 pl-[10px] border border-pink-300 rounded-[50px] mt-1" required>
@@ -45,7 +45,6 @@
                 <input type="email" id="email" name="email" placeholder="Enter your email address" class="w-full p-2 pl-[10px] border border-pink-300 rounded-[50px] mt-1" required>
             </div> 
 
-
             <div class="mb-4">
                 <label for="phone" class="block text-gray-900 bold-heading">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" class="w-full p-2 pl-[10px] border border-pink-300 rounded-[50px] mt-1" required>
@@ -57,7 +56,7 @@
             </div>
 
             <!-- Address -->
-            <h3 class="text-[25px] font-bold text-black mb-2 underline-double bold-heading">Address</h3>
+            <h3 class="text-xl sm:text-[25px] font-bold text-black mb-2 underline-double bold-heading">Address</h3>
             <div class="mb-4">
                 <label for="country" class="block text-gray-900 bold-heading">Country:</label>
                 <select id="country" name="country" class="w-full p-2 border border-pink-300 rounded-[50px] mt-1" required>
@@ -84,17 +83,13 @@
                 </select>
             </div>
 
-
-
             <div class="mb-4">
                 <label for="city" class="block text-gray-900 bold-heading">City:</label>
                 <input id="city" name="city" class="w-full p-2 border border-pink-300 rounded-[50px] mt-1" placeholder="Enter city name" required>
-              
-            </input>
             </div>
-<!-- 
-          Education  -->
-            <h3 class="text-[25px] font-bold text-black mb-2 underline-double bold-heading">Education</h3>
+
+            <!-- Education -->
+            <h3 class="text-xl sm:text-[25px] font-bold text-black mb-2 underline-double bold-heading">Education</h3>
             <div class="mb-4">
                 <label for="degree" class="block text-gray-900 bold-heading">Degree:</label>
                 <div class="relative inline-block w-full">
@@ -155,24 +150,20 @@
             </div>
 
             <!-- Skills -->
-             <h3 class="text-[25px] font-bold text-black mb-2 underline-double bold-heading">Skills</h3>
+             <h3 class="text-xl sm:text-[25px] font-bold text-black mb-2 underline-double bold-heading">Skills</h3>
             <div class="mb-4">
                 <label for="skill" class="block text-gray-900 bold-heading">Skills:</label>
                 <input type="text" id="skill" name="skill" placeholder="HTML , CSS ,etc" class="w-full p-2 border border-pink-300 rounded-[50px] mt-1" required>
-                  
-             
             </div> 
 
             <!-- Languages -->
             <div class="mb-4">
                 <label for="language" class="block text-gray-900 bold-heading">Languages:</label>
                 <input type="text" id="language" name="Languages" placeholder="English , Urdu , etc" class="w-full p-2 border border-pink-300 rounded-[50px] mt-1" required>
-                  
-             
             </div> 
 
             <!-- Work Experience -->
-             <h3 class="text-[25px] font-bold text-black mb-2 underline-double bold-heading">Work Experience</h3>
+             <h3 class="text-xl sm:text-[25px] font-bold text-black mb-2 underline-double bold-heading">Work Experience</h3>
             <div class="mb-4">
                 <label for="company" class="block text-gray-900 bold-heading">Company:</label>
                 <input type="text" id="company" name="company" placeholder="Enter the company name" class="w-full p-2 border border-pink-300 rounded-[50px] mt-1" required>
@@ -181,20 +172,19 @@
                 <label for="years" class="block text-black bold-heading">Years of Job Experience:</label>
                 <input type="text" id="years" name="years" placeholder="Enter years of (2000-2001)" class="w-full p-2 border border-pink-300 rounded-[50px] mt-1" required>
             </div> 
-<!-- profile -->
+
+            <!-- Profile -->
             <div class="mb-4">
-                <label for="profile-pic" class="text-[25px] font-bold text-black mb-2 underline-double bold-heading">Profile Picture:</label>
+                <label for="profile-pic" class="text-xl sm:text-[25px] font-bold text-black mb-2 underline-double bold-heading">Profile Picture:</label>
                 <input type="file" id="profile-pic" name="profile-pic" accept="image/*" class="w-full p-2 border border-pink-300 rounded-[50px] mt-1">
             </div>
 
-
-
-   <a href="../dynamic/dynamic.html">
-    <button type="submit" class="w-[200px] border-solid border-white border-[4px] bg-purple-500 text-white p-2 text-[30px] font-bold ml-[110px] mt-[20px] rounded-lg hover:bg-purple-600">Submit</button></a>
+            <a href="../dynamic/dynamic.html">
+                <button type="submit" class="w-full sm:w-[200px] border-solid border-white border-[4px] bg-purple-500 text-white p-2 text-xl sm:text-[30px] font-bold sm:ml-[110px] mt-[20px] rounded-lg hover:bg-purple-600">Submit</button>
+            </a>
         </form>
     </div>
     <script src="form.js"></script>
     <script src="daynamic.js"></script>
-
 </body>
 </html>
