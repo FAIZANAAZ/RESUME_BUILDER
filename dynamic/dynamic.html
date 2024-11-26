@@ -32,10 +32,10 @@
       }
     </style>
 </head>
-<body class="m-0 p-0 w-[100%] bg-purple-300 box-border flex justify-center items-start"> 
+<body class="m-0 p-0  bg-purple-300 box-border flex justify-center items-center"> 
   
 <div class="flex flex-col">
-   <main id="maindiv" class="w-[100%] mt-[40px] mb-[50px] bg-white flex flex-row">
+   <main id="maindiv" class="md:w-[90%] mt-[40px] mb-[50px] bg-white flex flex-row">
 
     <section class="w-[40%] bg-[#c978be]" id="colorr">
         <div class="flex flex-col justify-between items-center">
@@ -110,203 +110,28 @@
     </section>
    </main>
 
-   <div id="editdiv" class="ml-[50px] mb-[100px] items-center flex flex-wrap">
+   <div id="editdiv">
+
+   <div  class="ml-[50px] mb-[100px] items-center flex flex-wrap">
     <button id="printbtn" class="btne text-white bg-[#be40be] hover:text-black hover:bg-[#ee9aee] w-[160px] h-[60px] border-solid border-2 border-black rounded-[10px] text-[20px] font-bold m-2">PRINT</button>
     <button id="editbtn" class="btne text-white bg-[#be40be] hover:text-black hover:bg-[#ee9aee] w-[160px] h-[60px] border-solid border-2 border-black rounded-[10px] text-[20px] font-bold m-2">EDIT</button>
     <button class="btn text-white bg-[#be40be] hover:bg-[#ee9aee] hover:text-black w-[160px] h-[60px] border-solid border-2 border-black rounded-[10px] text-[20px] font-bold m-2" id="copyLinkBtn">Copy Link</button>
 
     
-      <input type="color" id="colorInput" class="p-1 bg-[#be40be] mb-[10px] w-[200px] block sm:hidden">
-      <button id="colorButton" class="text-black border-black border-solid hover:text-white border-2 rounded-[10px] p-1 text-[20px] font-bold block sm:hidden">Select Resume Color</button>
+      <input type="color" id="colorInput" class="p-1 bg-[#be40be] mb-[10px] w-[200px] block xl:hidden">
+      <button id="colorButton" class="text-black border-black border-solid hover:text-white border-2 rounded-[10px] p-1 text-[20px] font-bold block xl:hidden">Select Resume Color</button>
 
    </div>
 </div>
 
-<div class="absolute top-[400px] right-[60px] hidden  sm:block flex-col "> 
+<div class="absolute top-[400px] right-[60px] hidden  xl:block flex-col "> 
   <input type="color" id="colorInput2" class="p-1 bg-[#be40be] mb-[10px] w-[200px]">
   <button id="colorButton2" class="text-black border-black border-solid hover:text-white border-2 rounded-[10px] p-1 text-[20px] font-bold">Select Resume Color</button>
 </div>
- 
+</div>
 <script src="daynamic.js"></script>     
 
 </body>
 </html>
 
 
-
-<!-- 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAYNAMIC_RESUME</title>
-    <link rel="stylesheet" href="../src/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-  
-   
-      /* Hidden color input ko style */
-     
-
-      #colorInput.show {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000; /* Ensures it appears above other content */
-  }
-      </style>
-
-
-
-
-</head>
-<body class="m-0 p-0 w-[100%] bg-purple-300 box-border flex justify-center items-start "> 
-  
-<div class="flex flex-col ">
-   <main id="maindiv" class="w-[100%]   mt-[40px] mb-[50px]  bg-white  flex flex-row ">
-
-    <section class="  w-[40%] bg-[#c978be]" id="colorr">
-        <div class="flex flex-col justify-between items-center">
-            
-            Profile Picture -->
-            <!-- <img id="from_profilepic" class="w-[200px] h-[200px] mt-[10px] mr-[10px] object-cover" loading="lazy"  src="" alt="Profile Picture"> -->
-            <!-- Name and Title -->
-             <!-- <div class="text-white">
-                <h1 id="username" class="underline text-center text-[35px] mt-[20px] font-bold" style="-webkit-text-stroke: 2px black; color: rgb(255, 255, 255);"><span>FAIZA NAAZ</span></h1>
-                <h2 id="titlech" class="underline text-black font-bold text-[20px] text-center mt-[4px] "><span>SOFTWARE ENGINEER</span></h2>
-            </div> 
-            
-        </div> 
-        <h1 class=" text-white font-bold text-[25px] text-center mt-[20px] bg-black" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ">Contact Me</h1> -->
-         <!-- Contact Details -->
-         <!-- <div class="flex flex-col items-start text-[20px] font-bold p-[20px] "> -->
-  
-            <!-- Phone Section -->
-            <!-- <div class="flex flex-wrap items-center font-bold text-[20px]" ><i class="fa-solid fa-mobile-screen mr-2"></i>Phone:&nbsp;&nbsp; -->
-               <!-- Mobile Icon -->
-              <!-- <span id="numbercha" class="text-[15px] font-semibold text-gray-900 "> 03168909876</span>
-            </div> -->
-          
-            <!-- Email Section -->
-            <!-- <div class="flex flex-wrap items-center font-bold text-[20px] mt-2" >
-              
-              <i class="fa-solid fa-envelope  mr-2"></i>Email: &nbsp;&nbsp;  Email Icon -->
-              <!-- <span id="emailch" class="text-[15px] font-semibold text-gray-900 ">faizanaaz@gmail.com</span>
-            </div>  -->
-          
-            <!-- LinkedIn Section -->
-            <!-- <div class="flex flex-wrap items-center font-bold text-[20px] mt-2" >
-            
-              <i class="fa-brands fa-linkedin  mr-2"></i>  LinkedIn:&nbsp;&nbsp;   LinkedIn Icon -->
-              <!-- <span class="text-[15px] font-semibold text-gray-900" id="linkinch">www.linkedin.com/faizanaaz17396</span>
-            </div>
-          
-          </div> --> 
-          
-<!-- address -->
-                   <!-- <section class="w-full text-center text-[30px] font-bold sec-address ">
-                 
-            <h1 class=" text-white font-bold text-[25px] text-center  bg-black" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ">Address</h1>
-
-            <div class="flex  mb-[45px] mt-[20px]">
-            <div >
-            <p class="text-start text-black ml-[20px] text-[20px]"><u>COUNTRY</u></p>
-            <p id="countrych" class="text-[15px]  mb-[5px] ml-[20px]  text-start font-semibold text-gray-900"><i class="fa-regular fa-circle"></i> <span> Pakistan</span></p>
-        </div>
-
-        <div >
-            <p class="text-start text-black ml-[20px] text-[20px]"><u>CITY</u></p>
-            <p id="adrass_citych" class="text-[15px]  mb-[5px] ml-[20px]  text-start font-semibold text-gray-900"><i class="fa-regular fa-circle"></i> <span> Karachi</span></p>
-        </div>
-    </div>
-        </section> 
-
-    </section> -->
-
-    <!-- sec2 -->
-
-     <!-- <section  class=" w-[60%] bg-white ">
-        <section class="w-full  secedu text-[30px] text-center text-white font-bold">
-            <h2 class="text-[25px] font-bold bg-black p-[5px] border-2 border-black">Education</h2> <p class="text-start ml-[20px] mt-[20px] text-[black] text-[20px]"><u >DEGREE</u></p><p id="degreech" class="text-[15px]   mb-[5px] ml-[20px]  text-start font-semibold text-gray-900"><i class="fa-regular fa-circle"></i><span>Bachelor in Computer Science</span></p><p class="text-start text-black ml-[20px] text-[20px]"><u>INSTITUDE</u></p>
-              <p id="institutech" class="text-[15px]  mb-[5px] ml-[20px]  text-start font-semibold text-gray-900"><i class="fa-regular fa-circle"></i>  <span>from Karachi University</span></p><p class="text-start text-black ml-[20px] text-[20px]"><u>YEAR OF GRADUTION</u></p>
-              <pre id="yearch" class="text-[20px]  mb-[5px]   text-start font-semibold text-gray-900 ml-[20px]"><i class="fa-regular fa-circle"></i> <span>(2024)</span></pre>
-          </section> -->
-
-        <!-- Work Experience Section -->
-        
-          <!-- <section class="w-full mt-[20px] secwork text-start text-[30px] font-bold ">
-            <h2 class="text-[25px] font-bold bg-black p-[5px] border-2 border-black text-white text-center">Work Experience</h2><p class="text-start text-black ml-[20px] text-[20px] mt-[20px]"><u>COMPANY</u></p>
-            <p id="companych"class="text-[15px]  mb-[5px]  font-semibold text-gray-900 text-start text-black ml-[20px]"><i class="fa-regular fa-circle"></i> <span>Software Developer at TechWave Solutions </span></p>
-           <p class="text-start text-black ml-[20px] text-[20px]"> <u>YEAR</u></p>
-            <p id="company_yearch" class="text-[20px]  mb-[5px]   text-start font-semibold text-gray-900 ml-[20px]"><i class="fa-regular fa-circle"></i><span class="">(2022-2024)</span></p>
-        </section>   -->
-
-
-                <!-- Skills Section -->
-        <!-- <section class="w-full  mt-[20px] font-bold  secskill">
-            <h2 class="text-[25px] font-bold bg-black p-[5px] border-2 border-black text-white text-center">Skills</h2>
-            <ul id="skillsch"  class="list-none font-semibold text-gray-900 mt-[10px] pl-[10px] flex flex-wrap">
-
-                
-                <li class="text-[25px] mt-[10px]   "><span>1. Javascript</span></li>
-               
-            </ul>
-        </section> -->
-
-        <!-- Languages Section -->
-          <!-- <section class="w-full  mt-[20px] sec-lang">
-            <h2 class="text-[25px] font-bold bg-black p-[5px] border-2 border-black text-white text-center">Languages</h2>
-            <ul class="list-none flex flex-wrap">
-                <li id="languagech" class="text-[20px] mt-[20px] font-semibold text-gray-900 mb-[20px] text-start ml-[10px]"><span>English ,Urdu</span></li>
-             
-            </ul>
-        </section>   -->
-<!-- 
-    </section>
-    
-   </main>
-
-   <div id="editdiv" class="ml-[50px] mb-[100px] items-center">
-
-    <button id="printbtn" class="btne text-white bg-[#be40be] hover:text-black hover:bg-[#ee9aee]  w-[160px] h-[60px] border-solid border-2 border-black rounded-[10px] text-[20px] font-bold " >PRINT</button>
-    <button id="editbtn" class="btne  text-white bg-[#be40be] hover:text-black hover:bg-[#ee9aee] w-[160px] h-[60px] border-solid border-2 border-black rounded-[10px] text-[20px] font-bold " >EDIT</button>
-         -->
-    <!-- <a href="#" id="resumeLink" class="btn text-white bg-[#be40be] hover:text-black hover:bg-[#ee9aee] w-[160px] border-solid border-2 border-black rounded-[10px] p-4 text-[20px] font-bold ">Shareable Resume Link</a> -->
-    
-    <!-- <button class="btn  text-white bg-[#be40be] hover:bg-[#ee9aee] hover:text-black w-[160px] h-[60px] border-solid border-2 border-black rounded-[10px] text-[20px] font-bold " id="copyLinkBtn">Copy Link</button>
-    
-    
-
- 
-</div>
-</div> -->
-
-<!-- <div class="absolute top-[400px] right-[60px] flex flex-col" >  -->
-  <!-- Hidden color picker input -->
-  <!-- <input type="color" id="colorInput" class="p-1 bg-[#be40be] mb-[10px] w-[200px]">
-  <button id="colorButton" class=" text-black  border-black border-solid  hover:text-white  border-2  rounded-[10px] p-1 text-[20px] font-bold ">Select Resume Color</button>
-
-</div>
- 
-      
-        <script src="daynamic.js"></script> 
-    <script>
-    function scaleCV() {
-        const scaleX = window.innerWidth / 1920; // Assuming 1920px is the original design width
-        const scaleY = window.innerHeight / 1080; // Assuming 1080px is the original design height
-        const scale = Math.min(scaleX, scaleY);
-        document.body.style.transform = `scale(${scale})`;
-        document.body.style.transformOrigin = 'top left';
-        document.body.style.height = `${1080 / scale}px`; // Adjust body height to show full content
-        document.body.style.width = `${1920 / scale}px`; // Adjust body width to show full content
-    }
-
-    window.addEventListener('load', scaleCV);
-    window.addEventListener('resize', scaleCV);
-    </script>
-</body>
-
-</html>  -->
