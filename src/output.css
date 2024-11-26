@@ -1643,6 +1643,10 @@ video {
     display: block;
   }
 
+  .xl\:flex {
+    display: flex;
+  }
+
   .xl\:hidden {
     display: none;
   }
@@ -1657,5 +1661,9 @@ video {
 
   .xl\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
   }
 }
