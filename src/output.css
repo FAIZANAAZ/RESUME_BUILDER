@@ -1630,6 +1630,12 @@ video {
   }
 }
 
+@media (min-width: 1024px) {
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+}
+
 @media (min-width: 1280px) {
   .xl\:right-\[30\.9\%\] {
     right: 30.9%;
@@ -1637,6 +1643,10 @@ video {
 
   .xl\:top-\[491px\] {
     top: 491px;
+  }
+
+  .xl\:right-\[25\.9\%\] {
+    right: 25.9%;
   }
 
   .xl\:block {
@@ -1661,6 +1671,10 @@ video {
 
   .xl\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .xl\:w-\[50\%\] {
+    width: 50%;
   }
 
   .xl\:flex-row {
