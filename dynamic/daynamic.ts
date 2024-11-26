@@ -133,8 +133,16 @@ window.addEventListener("load", () => {
   const colorButton = document.getElementById("colorButton") as HTMLButtonElement;
   const colorInput = document.getElementById("colorInput") as HTMLInputElement;
 
+  const colorButton2 = document.getElementById("colorButton2") as HTMLButtonElement;
+  const colorInput2 = document.getElementById("colorInput2") as HTMLInputElement;
+
+
   colorButton.addEventListener("click", () => {
     colorInput.click();
+  });
+
+  colorButton2.addEventListener("click", () => {
+    colorInput2.click();
   });
 
   colorInput.addEventListener("input", () => {
@@ -143,7 +151,16 @@ window.addEventListener("load", () => {
     localStorage.setItem("selectedColor", selectedColor);
     // Naya color localStorage mein save ho jayega
   });
+
+  colorInput2.addEventListener("input", () => {
+    const selectedColor = colorInput2.value;
+    colorr.style.backgroundColor = selectedColor;
+    localStorage.setItem("selectedColor", selectedColor);
+    // Naya color localStorage mein save ho jayega
+  });
 });
+
+
 
 // Copy link to clipboard with `direct=true` parameter
 document.getElementById("copyLinkBtn")!.addEventListener("click", () => {

@@ -598,6 +598,10 @@ video {
   margin: 0px;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -807,10 +811,6 @@ video {
   width: 40%;
 }
 
-.w-\[500px\] {
-  width: 500px;
-}
-
 .w-\[60\%\] {
   width: 60%;
 }
@@ -841,6 +841,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.resize {
+  resize: both;
 }
 
 .list-none {
@@ -1353,6 +1357,10 @@ video {
     margin-left: 120px;
   }
 
+  .sm\:block {
+    display: block;
+  }
+
   .sm\:hidden {
     display: none;
   }
@@ -1375,6 +1383,14 @@ video {
 
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:w-\[700px\] {
+    width: 700px;
+  }
+
+  .sm\:w-\[250px\] {
+    width: 250px;
   }
 
   .sm\:flex-row {
@@ -1414,8 +1430,8 @@ video {
     font-size: 30px;
   }
 
-  .sm\:text-\[20px\] {
-    font-size: 20px;
+  .sm\:text-\[40px\] {
+    font-size: 40px;
   }
 }
 
@@ -1430,6 +1446,54 @@ video {
 
   .md\:top-\[439px\] {
     top: 439px;
+  }
+
+  .md\:right-\[18\.5\%\] {
+    right: 18.5%;
+  }
+
+  .md\:right-\[26\.5\%\] {
+    right: 26.5%;
+  }
+
+  .md\:right-\[36\.5\%\] {
+    right: 36.5%;
+  }
+
+  .md\:right-\[30\.5\%\] {
+    right: 30.5%;
+  }
+
+  .md\:right-\[31\.5\%\] {
+    right: 31.5%;
+  }
+
+  .md\:right-\[30\.1\%\] {
+    right: 30.1%;
+  }
+
+  .md\:right-\[30\.2\%\] {
+    right: 30.2%;
+  }
+
+  .md\:right-\[30\.8\%\] {
+    right: 30.8%;
+  }
+
+  .md\:right-\[30\.9\%\] {
+    right: 30.9%;
+  }
+
+  .md\:top-\[479px\] {
+    top: 479px;
+  }
+
+  .md\:top-\[489px\] {
+    top: 489px;
+  }
+
+  .md\:top-\[491px\] {
+    top: 491px;
   }
 
   .md\:mb-0 {
@@ -1476,6 +1540,14 @@ video {
     margin-top: 40px;
   }
 
+  .md\:ml-2 {
+    margin-left: 0.5rem;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
   .md\:inline {
     display: inline;
   }
@@ -1494,6 +1566,18 @@ video {
 
   .md\:h-\[890px\] {
     height: 890px;
+  }
+
+  .md\:h-\[\] {
+    height: ;
+  }
+
+  .md\:h-\[500px\] {
+    height: 500px;
+  }
+
+  .md\:h-\[990px\] {
+    height: 990px;
   }
 
   .md\:w-\[160px\] {
@@ -1522,6 +1606,22 @@ video {
 
   .md\:w-\[600px\] {
     width: 600px;
+  }
+
+  .md\:w-\[\] {
+    width: ;
+  }
+
+  .md\:w-\[500px\] {
+    width: 500px;
+  }
+
+  .md\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .md\:w-\[40\%\] {
+    width: 40%;
   }
 
   .md\:flex-row {

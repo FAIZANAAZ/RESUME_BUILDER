@@ -105,11 +105,22 @@ window.addEventListener("load", () => {
     // Color change code with localStorage
     const colorButton = document.getElementById("colorButton");
     const colorInput = document.getElementById("colorInput");
+    const colorButton2 = document.getElementById("colorButton2");
+    const colorInput2 = document.getElementById("colorInput2");
     colorButton.addEventListener("click", () => {
         colorInput.click();
     });
+    colorButton2.addEventListener("click", () => {
+        colorInput2.click();
+    });
     colorInput.addEventListener("input", () => {
         const selectedColor = colorInput.value;
+        colorr.style.backgroundColor = selectedColor;
+        localStorage.setItem("selectedColor", selectedColor);
+        // Naya color localStorage mein save ho jayega
+    });
+    colorInput2.addEventListener("input", () => {
+        const selectedColor = colorInput2.value;
         colorr.style.backgroundColor = selectedColor;
         localStorage.setItem("selectedColor", selectedColor);
         // Naya color localStorage mein save ho jayega
